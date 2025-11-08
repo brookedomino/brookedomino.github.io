@@ -1,9 +1,31 @@
 /* Reset & global styles */
+/*trying to pulse the home page
+@keyframes myAnim {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}*/
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
   font-family: "Poppins", sans-serif;
@@ -26,8 +48,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 32px 80px;
-  background-color: #f9f7f3; /* solid background */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* subtle depth */
+  background-color: #f9f7f3;
+  /* solid background */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  /* subtle depth */
 }
 
 .logo {
@@ -37,29 +61,14 @@ header {
   text-decoration: none;
 }
 
-/* .logo {
-  font-weight: 700;
-  font-size: 1.3rem;
-  letter-spacing: 0.5px;
-} */
-
-nav a {
-  text-decoration: none;
-  color: #1a1a1a;
-  margin-left: 36px;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-nav a:hover {
-  color: #0077ff;
-}
-
-
 .logo {
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: .5px;
+}
+
+.nav-link {
+  display: inline-block
 }
 
 nav a {
@@ -75,14 +84,20 @@ nav a:hover {
 }
 
 .hero {
-  height: 100vh; /* full viewport height */
+  height: 100vh;
+  /* full viewport height */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertically centers content */
-  align-items: center; /* horizontally centers content */
-  text-align: center; /* centers text */
-  background-color: #f9f7f3; /* or your background color/image */
-  padding: 0 20px; /* keeps text from touching screen edges */
+  justify-content: center;
+  /* vertically centers content */
+  align-items: center;
+  /* horizontally centers content */
+  text-align: center;
+  /* centers text */
+  background-color: #f9f7f3;
+  /* or your background color/image */
+  padding: 0 20px;
+  /* keeps text from touching screen edges */
 }
 
 /* Hero section */
@@ -110,6 +125,7 @@ nav a:hover {
   color: #666;
   margin-bottom: 30px;
 }
+
 /*
 .btn {
   background-color: #1a1a1a;
@@ -131,7 +147,7 @@ nav a:hover {
   height: 420;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transform: rotate(3deg);
 }
 
@@ -206,7 +222,8 @@ footer {
   }
 
   .hero {
-    flex-direction: column; /* stack text above image */
+    flex-direction: column;
+    /* stack text above image */
     text-align: center;
     padding: 60px 24px;
   }
@@ -286,7 +303,7 @@ footer {
 .work-item {
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   transition: transform 0.2s ease;
 }
@@ -332,4 +349,118 @@ footer {
   color: #555;
   font-size: 1.1rem;
   line-height: 1.8;
+}
+
+
+
+
+/* optional: small click feedback for keyboard users */
+header a:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.1);
+  outline-offset: 4px;
+}
+
+/* respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .bounce-anim {
+    animation: none;
+    transform: none;
+  }
+}
+
+header a {
+  outline: none;
+}
+
+header a:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ===================== */
+/* BOUNCE ANIMATIONS */
+
+/* Logo bounce (brd) */
+@keyframes bounce-logo {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-12px);
+  }
+
+  60% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce-logo-anim {
+  animation: bounce-logo 400ms cubic-bezier(.2, .8, .3, 1);
+  will-change: transform;
+}
+
+/* Nav link bounce */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-8px);
+  }
+
+  60% {
+    transform: translateY(3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce-anim {
+  animation: bounce 400ms cubic-bezier(.2, .8, .3, 1);
+  will-change: transform;
+}
+
+.contact-icons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.contact-icons img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.contact-icons img:hover {
+  transform: scale(1.15);
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.about-photo {
+  width: 250px;        /* adjust size as you like */
+  height: auto;
+  border-radius: 10px; /* optional: soft rounded corners */
+  object-fit: cover;
+}
+
+.about p {
+  flex: 1;
+  line-height: 1.6;
 }
