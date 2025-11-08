@@ -464,3 +464,34 @@ header a:focus {
   flex: 1;
   line-height: 1.6;
 }
+
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.about-photo {
+  width: 250px;        /* adjust size as you like */
+  height: auto;
+  border-radius: 10px; /* optional: soft rounded corners */
+  object-fit: cover;
+}
+
+.about p {
+  flex: 1;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-photo {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
