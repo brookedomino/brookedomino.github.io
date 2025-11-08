@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<link rel="icon" type="image/jpg" href="brdcircle.png">
+  <link rel="icon" type="image/jpg" href="brdcircle.png">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>brd.</title>
 
-  <!-- Google Font similar to the sample -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header>
-    
-    <!-- <a href="#top" class="logo">brd.</a> -->
-     <!-- <div class="logo">brd.</div>  -->
 
-     <a href="#top" class="logo">brd.</a>
+<body>
+  <!-- HEADER -->
+  <header>
+    <a href="#top" class="logo">brd.</a>
     <nav>
-      <a href="#about">about</a>
-      <a href="#work">work</a>
-      <a href="#contact">contact</a>
+      <a href="#about" class="nav-link">about</a>
+      <a href="#work" class="nav-link">work</a>
+      <a href="#contact" class="nav-link">contact</a>
     </nav>
   </header>
 
-<div id="greeting"></div>
 
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-text">
       <h1>Hello, I'm Brooke.</h1>
       <p>A copywriter and design enthusiast crafting thoughtful digital experiences.</p>
-      <!-- <a href="#" class="btn">View My Work</a> -->
-    </div>
-
-    
     </div>
   </section>
+
   <!-- ABOUT SECTION -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a copywriter and design enthusiast with a passion for creating simple, thoughtful, and visually engaging digital experiences. 
-      I enjoy improving the user experience through clear copy and intuituve design. 
-    </p>
-  </section>
+ <section id="about" class="about">
+  <h2>About Me</h2>
 
-  <!-- WORK SECTION -->
+  <div class="about-content">
+    <img src="brooke_photo_jpeg.jpeg" alt="Brooke Domino headshot" class="about-photo">
+
+    <p>
+      I’m a copywriter who has discovered an enthusiasm for UX. Through my years of writing I have learned how much a thoughtful digital experience matters. It’s not just about what you say, but how people move through it. My favorite part of any project is making that experience feel effortless and intuitive. My background in content writing helps me understand what the user needs, and even more importantly, how to make their time on a website feel clear, simple, and enjoyable. Whether I’m refining copy, creating a brand voice, or implementing user-friendly design, my goal is always the same; make things feel simple, engaging, and meaningful.
+    </p>
+  </div>
+</section>
+
+
+<!-- WORK SECTION -->
   <section id="work" class="work">
     <h2>Selected Work</h2>
 
     <div class="work-grid">
       <div class="work-item">
-        <img src="tspInvolvement.jpg" alt="Project 1">
+        <img src="tspexample.jpg" alt="Project 1">
         <h3>Training Material</h3>
         <p>I updated and streamlined the training material for a non-profit organiation. This included writing the copy and designing the layout. The challenge was conveying a large ammount of information as clearly as possible, while still being appealing to the user.</p>
       </div>
 
-      
+        <div class="work-grid">
+      <div class="work-item">
+        <img src="dropcap2.jpg" alt="Project 1">
+        <h3>Website Copy</h3>
+        <p>I helped to create the  content, voice and style of a new direct to consumer product. It was a challenge to create something from the ground up, and I enjoyed the chance to shape the brand image.</p>
+      </div>
+
+      <!--
       <div class="work-item">
         <!--
         <img src="https://via.placeholder.com/400x250" alt="Project 2">
@@ -69,20 +75,43 @@
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>
-      I’d love to connect! Whether you have a question, a project idea, or just want to say hi, feel free to reach out.
-    </p>
-    <a href="mailto:youremail@example.com" class="btn">Say Hello</a>
+
+  <!-- WORK SECTION 
+  <section id="work" class="work">
+    <h2>Work</h2>
+    <div class="work-grid">
+      <div class="work-item">
+        <img src="tspexample.jpg" alt="Project 1">
+        <h3>Training Material</h3>
+        <p>I updated and streamlined the training material for a non-profit organization. This included writing the copy
+          and designing the layout.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- CONTACT SECTION -->
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>I’d love to connect! Whether you have a question, a project idea, or just want to say hi, feel free to reach out.</p>
+
+  <div class="contact-icons">
+    <a href="mailto:brookedomino@gmail.com" target="_blank">
+      <img src="mail.png" alt="Email Icon">
+    </a>
+
+    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-HERE/" target="_blank">
+      <img src="linkedin.png" alt="LinkedIn Icon">
+    </a>
+  </div>
+</section>
+
+
+  <!-- FOOTER 
   <footer>
     <p>© 2025 Brooke Domino</p>
-  </footer>
-  <script src = "index.js"></script>
-</body>
+  </footer>-->
 
+  <script src="index.js"></script>
+</body>
 
 </html>
