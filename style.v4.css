@@ -110,3 +110,32 @@ header a:focus { outline: none; box-shadow: none; }
   .about-content { flex-direction: column; text-align: center; }
   .about-photo { width: 70%; margin: 0 auto; }
 }
+/* --- Clickable elements show a hand cursor --- */
+a, button, [role="button"], input[type="submit"], input[type="button"] {
+  cursor: pointer;
+}
+
+/* --- Navbar link hover effect (scale on hover) --- */
+nav a {
+  font-weight: 500;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block; /* needed so transform works smoothly */
+}
+
+nav a:hover {
+  transform: scale(1.1); /* slightly enlarge */
+  color: #000; /* optional: a bit darker on hover */
+}
+/* --- Logo hover effect (same as nav links) --- */
+.logo {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+.work-item:hover {
+  transform: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
